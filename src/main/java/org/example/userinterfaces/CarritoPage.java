@@ -14,7 +14,7 @@ public class CarritoPage {
 
     public static final Target PRIMER_PRODUCTO =
             Target.the("primer producto de la tienda")
-                    .located(By.cssSelector("a[data-test='product-01KTA3HW114QVBQYPS8RSEDW93']"));
+                    .located(By.cssSelector(".card[data-test^='product-']"));
 
     public static final Target NOMBRE_PRODUCTO =
             Target.the("nombre del producto en detalle")
