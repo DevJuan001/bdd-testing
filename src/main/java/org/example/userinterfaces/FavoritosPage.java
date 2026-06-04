@@ -10,7 +10,7 @@ public class FavoritosPage {
 
     public static final Target PRIMER_PRODUCTO =
             Target.the("primer producto de la lista")
-                    .located(By.cssSelector("a[data-test='product-01KTA3HW114QVBQYPS8RSEDW93']"));
+                    .located(By.cssSelector("a[data-test='product-01KTA6ZSBS1X48GEXJZPHJPVJY']"));
 
     public static final Target NOMBRE_PRODUCTO =
             Target.the("nombre del producto en detalle")
