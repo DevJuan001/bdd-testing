@@ -2,9 +2,7 @@ package org.example.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Clear;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.example.models.EditarPerfilModelo;
 
@@ -12,6 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 import static org.example.userinterfaces.PerfilPage.*;
 
 public class EditarPerfil implements Task {
@@ -66,6 +65,9 @@ public class EditarPerfil implements Task {
             Clear.field(CAMPO_DIRECCION),
             Enter.theValue(direccion).into(CAMPO_DIRECCION),
 
+            Clear.field(CAMPO_CODIGO_POSTAL),
+            Enter.theValue(codigoPostal).into(CAMPO_CODIGO_POSTAL),
+
             Clear.field(CAMPO_CIUDAD),
             Enter.theValue(ciudad).into(CAMPO_CIUDAD),
 
@@ -75,11 +77,8 @@ public class EditarPerfil implements Task {
             Clear.field(CAMPO_PAIS),
             Enter.theValue(pais).into(CAMPO_PAIS),
 
-            Clear.field(CAMPO_CODIGO_POSTAL),
-            Enter.theValue(codigoPostal).into(CAMPO_CODIGO_POSTAL),
-
             // Paso 3: Guardar
-            WaitUntil.the(BOTON_ACTUALIZAR, isVisible())
+            WaitUntil.the(BOTON_ACTUALIZAR, isClickable())
                     .forNoMoreThan(10).seconds(),
             Click.on(BOTON_ACTUALIZAR)
         );

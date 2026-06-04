@@ -47,11 +47,11 @@ public class PerfilPage {
 
     public static final Target CAMPO_CODIGO_POSTAL =
             Target.the("campo código postal del perfil")
-                    .located(By.cssSelector("[data-test='postcode']"));
+                    .located(By.cssSelector("[data-test='postal_code']"));
 
     public static final Target BOTON_ACTUALIZAR =
             Target.the("botón actualizar perfil")
-                    .located(By.cssSelector("button[data-test='update-profile-submit']"));
+                    .located(By.cssSelector("[data-test='update-profile-submit']"));
 
     public static final Target MENSAJE_EXITO =
             Target.the("mensaje de éxito al actualizar perfil")
